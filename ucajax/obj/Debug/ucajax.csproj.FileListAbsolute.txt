@@ -1,0 +1,5 @@
+C:\Library\uc-ajax\ucajax\bin\Debug\ucajax.dll
+C:\Library\uc-ajax\ucajax\bin\Debug\ucajax.pdb
+C:\Library\uc-ajax\ucajax\obj\Debug\ResolveAssemblyReference.cache
+C:\Library\uc-ajax\ucajax\obj\Debug\ucajax.dll
+C:\Library\uc-ajax\ucajax\obj\Debug\ucajax.pdb
