@@ -56,7 +56,18 @@
   <ItemGroup>
     <None Include="web.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="NuGet\ucajax.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NuGet\NuGet.exe" />
+    <Content Include="Script\ucajax.js" />
+    <Content Include="Service\AJAXContent.svc" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"$(ProjectDir)NuGet\NuGet.exe" pack "$(ProjectDir)NuGet\ucajax.nuspec"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

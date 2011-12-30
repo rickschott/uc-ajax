@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("uc-ajax-lib")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("ucajax")]
+[assembly: AssemblyDescription(".NET library and jQuery plugin for rendering ASP.NET UserControls via WCF web services.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("uc-ajax-lib")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2011")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ucajax")]
+[assembly: AssemblyCopyright("Copyright © Rick Schott 2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

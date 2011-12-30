@@ -3,11 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ucajax", "ucajax\ucajax.csproj", "{D195C1CD-4DC9-47C1-8329-DE576A937E8D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Script", "Script", "{180107D2-7273-4002-B0B3-8CE93AD545F4}"
-	ProjectSection(SolutionItems) = preProject
-		ucajax.js = ucajax.js
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ucajax.web", "ucajax.web\ucajax.web.csproj", "{CB08CBA4-4D57-4F32-96CE-11987E09EFB9}"
 EndProject
 Global
