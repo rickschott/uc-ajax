@@ -1,27 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<configuration>
-  <system.web>
-    <compilation debug="true" targetFramework="4.0" />
-    <authentication mode="None" />
-  </system.web>
-  <system.webServer>
-    <modules runAllManagedModulesForAllRequests="true" />
-  </system.webServer>
-  <system.serviceModel>
+﻿<system.serviceModel>
   <serviceHostingEnvironment multipleSiteBindingsEnabled="true" aspNetCompatibilityEnabled="true" />
   <behaviors>
     <serviceBehaviors>
       <behavior name="metadataAndDebugEnabled">
         <serviceDebug includeExceptionDetailInFaults="true" />
         <serviceMetadata httpGetEnabled="true" httpGetUrl="" />
-        <serviceThrottling maxConcurrentCalls="30" maxConcurrentInstances="1000" maxConcurrentSessions="1000" />
+        <serviceThrottling maxConcurrentCalls="30" maxConcurrentInstances="1000" maxConcurrentSessions="1000"/>
       </behavior>
     </serviceBehaviors>
     <endpointBehaviors>
-      <behavior name="Default">
+      <behavior name="Default" >
         <webHttp defaultOutgoingResponseFormat="Json" />
       </behavior>
     </endpointBehaviors>
   </behaviors>
-    </system.serviceModel>
-</configuration>
+</system.serviceModel>

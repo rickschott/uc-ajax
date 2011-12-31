@@ -2,9 +2,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata >
     <id>ucajax</id>
-    <version>1.0.2</version>
+    <version>1.0.4</version>
     <authors>Rick Schott</authors>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>.NET library and jQuery plugin for rendering ASP.NET UserControls via WCF web services.</description>
      <language>en-US</language>
     <projectUrl>https://github.com/rickschott/uc-ajax</projectUrl>
@@ -16,8 +16,10 @@
   </metadata>
   <files>
      <file src="..\bin\Debug\*.dll" target="lib" />
-     <file src="..\Script\*.js" target="Scripts" />
-     <file src="..\Service\*.svc" target="Service" />
+     <file src="..\Script\*.js" target="Content\Scripts" />
+     <file src="..\Service\*.svc" target="Content\Service" />
+     <file src="..\Service\web.config" target="Content\Service" />
+     <file src="..\Service\web.config.transform" target="Content" />
   </files>
  
 </package>

@@ -51,10 +51,12 @@
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="ucajax, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ucajax.1.0.4\lib\ucajax.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Service\AJAXContent.svc" />
     <Content Include="Controls\AJAXLoader.ascx" />
     <Content Include="Controls\UserControlSimple.ascx" />
     <Content Include="LoadViaServer.aspx" />
@@ -63,6 +65,7 @@
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Scripts\ucajax.js" />
+    <Content Include="Service\AJAXContent.svc" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -131,26 +134,10 @@
     <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ucajax\ucajax.csproj">
-      <Project>{D195C1CD-4DC9-47C1-8329-DE576A937E8D}</Project>
-      <Name>ucajax</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Service\Web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Service\Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Service\Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
