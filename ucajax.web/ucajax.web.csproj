@@ -52,13 +52,14 @@
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="ucajax, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ucajax.1.0.4\lib\ucajax.dll</HintPath>
+      <HintPath>..\packages\ucajax.1.0.6\lib\ucajax.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Controls\AJAXLoader.ascx" />
     <Content Include="Controls\UserControlSimple.ascx" />
+    <Content Include="LoadViaClient.aspx" />
     <Content Include="LoadViaServer.aspx" />
     <Content Include="Images\ajax-loader.gif" />
     <Content Include="Scripts\jquery-1.7.1-vsdoc.js" />
@@ -100,6 +101,13 @@
     </Compile>
     <Compile Include="Controls\UserControlSimple.ascx.designer.cs">
       <DependentUpon>UserControlSimple.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LoadViaClient.aspx.cs">
+      <DependentUpon>LoadViaClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoadViaClient.aspx.designer.cs">
+      <DependentUpon>LoadViaClient.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoadViaServer.aspx.cs">
       <DependentUpon>LoadViaServer.aspx</DependentUpon>

@@ -22,10 +22,9 @@
             <div class="clear hideSkiplink">
                 <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
                     <Items>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
-                        <asp:MenuItem NavigateUrl="~/LoadSelf.aspx" Text="Self Loader"/>                       
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>                                          
                         <asp:MenuItem NavigateUrl="~/LoadViaClient.aspx" Text="Client-side Loader"/>
-                        <asp:MenuItem NavigateUrl="~/LoadViaServer.aspx" Text="Server-side Loader"/>
+                        <asp:MenuItem NavigateUrl="~/LoadViaServer.aspx" Text="Server-side Loader"/>                         
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
                     </Items>
                 </asp:Menu>

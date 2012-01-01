@@ -14,6 +14,7 @@ namespace ucajax.web
             AJAXLoader1.ControlPath = Page.ResolveUrl("~/Controls/UserControlSimple.ascx");
             AJAXLoader1.ControlParams = new Dictionary<string, string>();
             AJAXLoader1.ControlParams.Add("TextProperty1","Set via AJAXLoader, rendered via WCF!");
+            AJAXLoader1.ControlParams.Add("AjaxAutoRefresh", "True");
         }
     }
 }

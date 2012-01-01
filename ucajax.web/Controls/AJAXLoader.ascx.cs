@@ -34,29 +34,14 @@ namespace ucajax.web.Controls
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Dictionary<string, string> parsedParms = new Dictionary<string, string>();
-            if (this.ControlParams != null) parsedParms = this.ControlParams;
+            AjaxControlViewModel model = new AjaxControlViewModel();
 
-            string jsonData = string.Empty;
+            model.ControlParams = this.ControlParams != null ? this.ControlParams : new Dictionary<string, string>();
+            model.ControlName = this.ControlName;
+            model.ControlAssembly = this.ControlAssembly;
+            model.ControlPath = this.ControlPath;
 
-            //JavaScriptSerilizer doesn't serialize Dictionary, so doing it by hand
-            string viewModelShell = @"{{ ""ajaxControlViewModel"":{{""ControlName"":""{0}"",""ControlAssembly"":""{2}"",""ControlPath"":""{3}"",""ControlParams"":[{1}]}} }}";
-
-            StringBuilder sb = new StringBuilder();
-
-
-            foreach (var item in parsedParms)
-            {
-                sb.Append(string.Format(@"{{ ""Key"":""{0}"", ""Value"":""{1}"" }},", item.Key, item.Value));
-
-            }
-            string controlParams = sb.ToString();
-            jsonData = string.Format(viewModelShell,
-                                        this.ControlName,
-                                        !string.IsNullOrEmpty(controlParams) ? controlParams.Remove(controlParams.Length - 1, 1) : controlParams,
-                                        this.ControlAssembly,
-                                        this.ControlPath
-                                    );  //remove last comma from params
+            string jsonData = model.toJsonString();         
 
             String csname1 = "AJAXViewModel" + AJAXContent.ClientID;
             Type cstype = this.GetType();
@@ -65,30 +50,29 @@ namespace ucajax.web.Controls
             // Check to see if the startup script is already registered.
             if (!cs.IsStartupScriptRegistered(cstype, csname1))
             {
-
                 bool autoRefresh = false;
                 int autoRefreshInterval = 0;
                 int pauseInterval = 0;
                 int defaultHeight = 0;
 
-                if (this.ControlParams != null && this.ControlParams.ContainsKey("AjaxAutoRefresh"))
+                if (this.ControlParams != null && model.ControlParams.ContainsKey("AjaxAutoRefresh"))
                 {
-                    autoRefresh = bool.Parse(this.ControlParams["AjaxAutoRefresh"]);
+                    autoRefresh = bool.Parse(model.ControlParams["AjaxAutoRefresh"]);
                 }
 
-                if (this.ControlParams != null && this.ControlParams.ContainsKey("AjaxAutoRefreshInterval"))
+                if (this.ControlParams != null && model.ControlParams.ContainsKey("AjaxAutoRefreshInterval"))
                 {
-                    autoRefreshInterval = Int32.Parse(this.ControlParams["AjaxAutoRefreshInterval"]);
+                    autoRefreshInterval = Int32.Parse(model.ControlParams["AjaxAutoRefreshInterval"]);
                 }
 
-                if (this.ControlParams != null && this.ControlParams.ContainsKey("AjaxPauseInterval"))
+                if (this.ControlParams != null && model.ControlParams.ContainsKey("AjaxPauseInterval"))
                 {
-                    pauseInterval = Int32.Parse(this.ControlParams["AjaxPauseInterval"]);
+                    pauseInterval = Int32.Parse(model.ControlParams["AjaxPauseInterval"]);
                 }
 
-                if (this.ControlParams != null && this.ControlParams.ContainsKey("AjaxDefaultContentHeight"))
+                if (this.ControlParams != null && model.ControlParams.ContainsKey("AjaxDefaultContentHeight"))
                 {
-                    defaultHeight = Int32.Parse(this.ControlParams["AjaxDefaultContentHeight"]);
+                    defaultHeight = Int32.Parse(model.ControlParams["AjaxDefaultContentHeight"]);
                     defaultWhiteSpace.Attributes.Add("style", string.Format("height:{0}px;", defaultHeight));
                 }
 
