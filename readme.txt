@@ -1,3 +1,5 @@
+See http://devlpr.net/ucajax/ for demo project running live.
+
 Added NuGet web.config transforms.
 
 TODO:
