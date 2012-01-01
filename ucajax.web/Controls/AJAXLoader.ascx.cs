@@ -16,7 +16,7 @@ namespace ucajax.web.Controls
             {
                 if (ViewState["RESTUrl"] != null)
                     return (string)ViewState["RESTUrl"];
-                return "/Service/AjaxContent.svc/GetAJAXControl";
+                return Page.ResolveUrl("~/Service/AjaxContent.svc/GetAJAXControl");
             }
             set
             {

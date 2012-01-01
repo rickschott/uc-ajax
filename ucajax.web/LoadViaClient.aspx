@@ -4,8 +4,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
 <script>
+     var baseUrl = "<%= ResolveUrl("~/") %>";
     $(document).ready(function () {
-        $().ucajax({ contentId: 'AJAXContent', postData: { "ajaxControlViewModel": { "ControlName": "", "ControlAssembly": "", "ControlPath": "/Controls/UserControlSimple.ascx", "ControlParams": [{ "Key": "TextProperty1", "Value": "Set via AJAXLoader, rendered via WCF!" }, { "Key": "AjaxAutoRefresh", "Value": "True"}]} }, RESTUrl: '/Service/AjaxContent.svc/GetAJAXControl', ajaxSpinnerId: 'ajaxifyspinner', autoRefresh: true, refreshInterval: 0, pauseInterval: 1500, recursed: false });
+        $().ucajax({ contentId: 'AJAXContent', postData: { "ajaxControlViewModel": { "ControlName": "", "ControlAssembly": "", "ControlPath": baseUrl + "Controls/UserControlSimple.ascx", "ControlParams": [{ "Key": "TextProperty1", "Value": "Set via AJAXLoader, rendered via WCF!" }, { "Key": "AjaxAutoRefresh", "Value": "True"}]} }, RESTUrl: baseUrl + 'Service/AjaxContent.svc/GetAJAXControl', ajaxSpinnerId: 'ajaxifyspinner', autoRefresh: true, refreshInterval: 0, pauseInterval: 1500, recursed: false });
     });
     
     

@@ -8,5 +8,8 @@
         Welcome to ucajax! 
     </h2>
     Yes, I used the default ASP.NET template for my demo.
-    
+    <br><br>
+    <p>
+    <a href="https://nuget.org/packages/ucajax"><img class="aligncenter size-full wp-image-8" title="nuget" src="http://devlpr.net/ucajax/wp-content/uploads/2011/12/nuget.png" alt="" width="760" height="76" /></a>
+    </p>
 </asp:Content>

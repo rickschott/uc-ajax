@@ -58,6 +58,9 @@
     <None Include="NuGet\ucajax.1.0.1.nupkg" />
     <None Include="NuGet\ucajax.1.0.2.nupkg" />
     <None Include="NuGet\ucajax.1.0.3.nupkg" />
+    <None Include="NuGet\ucajax.1.0.4.nupkg" />
+    <None Include="NuGet\ucajax.1.0.5.nupkg" />
+    <None Include="NuGet\ucajax.1.0.6.nupkg" />
     <None Include="Service\web.config.transform" />
   </ItemGroup>
   <ItemGroup>

@@ -25,7 +25,8 @@
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>                                          
                         <asp:MenuItem NavigateUrl="~/LoadViaClient.aspx" Text="Client-side Loader"/>
                         <asp:MenuItem NavigateUrl="~/LoadViaServer.aspx" Text="Server-side Loader"/>                         
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
+                        <asp:MenuItem NavigateUrl="http://devlpr.net/ucajax" Text="Project Site"/>
+                        <asp:MenuItem NavigateUrl="https://github.com/rickschott/uc-ajax" Text="GitHub Repo"/>
                     </Items>
                 </asp:Menu>
             </div>
