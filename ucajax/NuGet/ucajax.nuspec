@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata >
     <id>ucajax</id>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <authors>Rick Schott</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>.NET library and jQuery plugin for rendering ASP.NET UserControls via WCF web services.</description>

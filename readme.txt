@@ -1,5 +1,4 @@
-Added NuGet web.config transforms, only issue is if <System.ServiceModel> element doesn't exist NuGet doesn't create the element.
-Looking into this issue now.
+Added NuGet web.config transforms.
 
 TODO:
 
