@@ -15,6 +15,7 @@ namespace ucajax.web.Controls
         protected void Page_Load(object sender, EventArgs e)
         {
             lblTextProperty1.Text = TextProperty1;
+            lblDateTime.Text = "Oh, look at the time: " + DateTime.Now.ToString();
         }
     }
 }
