@@ -59,6 +59,9 @@
     <Content Include="About.aspx" />
     <Content Include="Controls\AJAXLoader.ascx" />
     <Content Include="Controls\UserControlSimple.ascx" />
+    <Content Include="Images\128x128uc.png" />
+    <Content Include="Images\128x128ucAlpha.png" />
+    <Content Include="Images\ucAJAX_logoAlpha.png" />
     <Content Include="LoadViaClient.aspx" />
     <Content Include="LoadViaServer.aspx" />
     <Content Include="Images\ajax-loader.gif" />
