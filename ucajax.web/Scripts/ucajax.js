@@ -1,19 +1,20 @@
 
 ; (function ($) {
     // Create some defaults, extending them with any options that were provided
-    var options = $.extend({
-        'contentId': '',
-        'postData': {},
-        'RESTUrl': '/Service/AjaxContent.svc/GetAJAXControl',
-        'ajaxSpinnerId': '',
-        'autoRefresh': false,
-        'refreshInterval': 30000,
-        'pauseInterval': 1500,
-        'recursed': false
+  
 
-    }, options);
-
-    $.fn.ucajax = function (options) {
+    $.fn.ucajax = function (options) {  
+    
+        var settings = $.extend({
+            'contentId': '',
+            'postData': {},
+            'RESTUrl': '/Service/AjaxContent.svc/GetAJAXControl',
+            'ajaxSpinnerId': '',
+            'autoRefresh': false,
+            'refreshInterval': 30000,
+            'pauseInterval': 1500,
+            'recursed': false
+        }, options);
 
         function init(options) {
             if (!options.recursed) {

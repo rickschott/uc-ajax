@@ -32,6 +32,8 @@ namespace ucajax.web.Controls
 
         public Dictionary<string, string> ControlParams { get; set; }
 
+        public bool UseWCFFormat { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             AjaxControlViewModel model = new AjaxControlViewModel();
@@ -41,7 +43,7 @@ namespace ucajax.web.Controls
             model.ControlAssembly = this.ControlAssembly;
             model.ControlPath = this.ControlPath;
 
-            string jsonData = model.toJsonString();         
+            string jsonData = UseWCFFormat ? model.toWCFJsonString() : model.toWebMethodJsonString();         
 
             String csname1 = "AJAXViewModel" + AJAXContent.ClientID;
             Type cstype = this.GetType();

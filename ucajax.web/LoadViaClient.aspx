@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Load via Client" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LoadViaClient.aspx.cs" Inherits="ucajax.web.LoadViaClient" %>
+﻿<%@ Page Title="ucajax - Load via Client WCF" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LoadViaClient.aspx.cs" Inherits="ucajax.web.LoadViaClient" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -13,15 +13,12 @@
                                                               "ControlParams": [{ "Key": "TextProperty1", "Value": "Set via JavaScript, rendered via WCF!" }, 
                                                                                 { "Key": "AjaxAutoRefresh", "Value": "True"}]} }, 
                         RESTUrl: baseUrl + 'Service/AjaxContent.svc/GetAJAXControl', 
-                        ajaxSpinnerId: 'ajaxifyspinner', 
-                        autoRefresh: true, 
-                        refreshInterval: 0, 
-                        pauseInterval: 1500
+                        ajaxSpinnerId: 'ajaxifyspinner'
                       });
     });   
 </script>
 <h2>
-        Load Via Client
+        Load Via Client WCF
     </h2>
     <p>
         This example uses the $().ucajax(); jQuery plug-in directly, 
@@ -51,10 +48,7 @@
                                                               "ControlParams": [{ "Key": "TextProperty1", "Value": "Set via JavaScript, rendered via WCF!" }, 
                                                                                 { "Key": "AjaxAutoRefresh", "Value": "True"}]} }, 
                         RESTUrl: baseUrl + 'Service/AjaxContent.svc/GetAJAXControl', 
-                        ajaxSpinnerId: 'ajaxifyspinner', 
-                        autoRefresh: true, 
-                        refreshInterval: 0, 
-                        pauseInterval: 1500
+                        ajaxSpinnerId: 'ajaxifyspinner'                       
                       });
         });  
     </pre>

@@ -52,13 +52,14 @@
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="ucajax, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ucajax.1.0.6\lib\ucajax.dll</HintPath>
+      <HintPath>..\packages\ucajax.1.0.9\lib\ucajax.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Controls\AJAXLoader.ascx" />
     <Content Include="Controls\UserControlSimple.ascx" />
+    <Content Include="LoadViaServerWebMethod.aspx" />
     <Content Include="Images\128x128uc.png" />
     <Content Include="Images\128x128ucAlpha.png" />
     <Content Include="Images\ucAJAX_logoAlpha.png" />
@@ -82,6 +83,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="LoadViaClientWebMethod.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -104,6 +106,13 @@
     </Compile>
     <Compile Include="Controls\UserControlSimple.ascx.designer.cs">
       <DependentUpon>UserControlSimple.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LoadViaServerWebMethod.aspx.cs">
+      <DependentUpon>LoadViaServerWebMethod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoadViaServerWebMethod.aspx.designer.cs">
+      <DependentUpon>LoadViaServerWebMethod.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoadViaClient.aspx.cs">
       <DependentUpon>LoadViaClient.aspx</DependentUpon>
@@ -136,6 +145,13 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LoadViaClientWebMethod.aspx.cs">
+      <DependentUpon>LoadViaClientWebMethod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoadViaClientWebMethod.aspx.designer.cs">
+      <DependentUpon>LoadViaClientWebMethod.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

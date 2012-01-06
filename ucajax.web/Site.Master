@@ -27,10 +27,10 @@
                 <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
                     <Items>
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>                                          
-                        <asp:MenuItem NavigateUrl="~/LoadViaClient.aspx" Text="Client-side Loader"/>
-                        <asp:MenuItem NavigateUrl="~/LoadViaServer.aspx" Text="Server-side Loader"/>                         
-                        <asp:MenuItem NavigateUrl="http://devlpr.net/ucajax" Text="Project Site"/>
-                        <asp:MenuItem NavigateUrl="https://github.com/rickschott/uc-ajax" Text="GitHub Repo"/>
+                        <asp:MenuItem NavigateUrl="~/LoadViaClient.aspx" Text="Client-side Loader WCF"/>
+                        <asp:MenuItem NavigateUrl="~/LoadViaServer.aspx" Text="Server-side Loader WCF"/> 
+                        <asp:MenuItem NavigateUrl="~/LoadViaClientWebMethod.aspx" Text="Client-side Loader WebMethod"/>
+                        <asp:MenuItem NavigateUrl="~/LoadViaServerWebMethod.aspx" Text="Server-side Loader WebMethod"/>  
                     </Items>
                 </asp:Menu>
             </div>
