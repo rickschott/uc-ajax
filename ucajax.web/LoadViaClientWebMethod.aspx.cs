@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Services;
+using System.Web.Script.Services;
 
 namespace ucajax.web
 {
@@ -15,7 +16,7 @@ namespace ucajax.web
 
         }
 
-        [WebMethod]
+        [WebMethod]        
         public static string RenderUserControl(ucajax.AjaxControlViewModel ajaxControlViewModel)
         {
             return RenderHelpers.RenderUserControl(ajaxControlViewModel.ControlPath, ajaxControlViewModel.UseFormLess, ajaxControlViewModel.ControlParams, ajaxControlViewModel.ControlAssembly, ajaxControlViewModel.ControlName, HttpContext.Current);

@@ -7,19 +7,17 @@
     var baseUrl = "<%= ResolveUrl("~/") %>";
     $(document).ready(function () {
             
-           $().ucajax({ contentId: 'AJAXContent', 
-                        postData: { "ajaxControlViewModel": { "ControlName": "", 
-                                                              "ControlAssembly": "", 
-                                                              "ControlPath": baseUrl + "Controls/UserControlSimple.ascx", 
-                                                              "ControlParams": {'TextProperty1':'Set via JavaScript, rendered via WCF!', 
-                                                                                'AjaxAutoRefresh':'true'}
-                                                                               
-                                                              
-                                                            }
-                                      }, 
-                        RESTUrl: baseUrl + 'LoadViaClientWebMethod.aspx/RenderUserControl', 
-                        ajaxSpinnerId: 'ajaxifyspinner'                        
-                      });
+        var model = new $.ucajax.viewModel($.ucajax.DICTIONARY_TYPE.WEBMETHOD);
+        model.ajaxControlViewModel.ControlPath = baseUrl + "Controls/UserControlSimple.ascx";
+        model.ajaxControlViewModel.ControlParams["TextProperty1"] = "Set via JavaScript, rendered via WebMethod!";
+        model.ajaxControlViewModel.ControlParams["TextProperty2"] = "True";
+                                   
+        $().ucajax({ contentId: 'AJAXContent',
+            postData: model, 
+            RESTUrl:  baseUrl + 'LoadViaClientWebMethod.aspx/RenderUserControl',
+            ajaxSpinnerId: 'ajaxifyspinner',
+            autoRefresh: true
+        });
     });   
 </script>
 <h2>
@@ -59,18 +57,17 @@
     <h4>JavaScript:</h4>
     <br>
     <pre class="brush: js;">
-        var baseUrl = "&lt;%= ResolveUrl("~/") %&gt;";
-        $(document).ready(function () {
-           $().ucajax({ contentId: 'AJAXContent', 
-                        postData: { "ajaxControlViewModel": { "ControlName": "", 
-                                                              "ControlAssembly": "", 
-                                                              "ControlPath": baseUrl + "Controls/UserControlSimple.ascx", 
-                                                              "ControlParams": {'TextProperty1':'Set via JavaScript, rendered via a WebMethod!', 
-                                                                                'AjaxAutoRefresh':'true'}
-                        RESTUrl: baseUrl + 'LoadViaClientWebMethod.aspx/RenderUserControl', 
-                        ajaxSpinnerId: 'ajaxifyspinner'   
-                      });
-        });  
+        var model = new $.ucajax.viewModel($.ucajax.DICTIONARY_TYPE.WEBMETHOD);
+        model.ajaxControlViewModel.ControlPath = baseUrl + "Controls/UserControlSimple.ascx";
+        model.ajaxControlViewModel.ControlParams["TextProperty1"] = "Set via JavaScript, rendered via WebMethod!";
+        model.ajaxControlViewModel.ControlParams["TextProperty2"] = "True";
+                                   
+        $().ucajax({ contentId: 'AJAXContent',
+            postData: model, 
+            RESTUrl:  baseUrl + 'LoadViaClientWebMethod.aspx/RenderUserControl',
+            ajaxSpinnerId: 'ajaxifyspinner',
+            autoRefresh: true
+        });
     </pre>
     <h2>Result:</h2>               
     <p>

@@ -12,9 +12,12 @@ namespace ucajax.web.Controls
     {
         public string TextProperty1 { get; set; }
 
+        public bool TextProperty2 { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             lblTextProperty1.Text = TextProperty1;
+            lblTextProperty2.Text = TextProperty2.ToString();
             lblDateTime.Text = "Oh, look at the time: " + DateTime.Now.ToString();
         }
     }

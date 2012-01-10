@@ -12,7 +12,8 @@
         This example uses a UserControl wrapper to pass server-side parameters to the $().ucajax(); jQuery plug-in, 
         then loading the control via a WebMethod. This allows the parameter generation to come from the
         server-side, whether they be dynamic or hard-coded. This example is also using the AjaxAutoRefresh feature, 
-        you can find more details <a href="#todo">here</a>.
+        you can find more details <a href="#todo">here</a>. One last thing, querystring params 
+        also get included in the ControlParams.
     </p>  
     <h2>Code for this page:</h2>
     <h4>Control Markup:</h4>

@@ -52,7 +52,7 @@
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="ucajax, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ucajax.1.0.9\lib\ucajax.dll</HintPath>
+      <HintPath>..\packages\ucajax.1.0.13\lib\ucajax.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

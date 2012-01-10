@@ -6,15 +6,19 @@
 <script>
     var baseUrl = "<%= ResolveUrl("~/") %>";
     $(document).ready(function () {
-           $().ucajax({ contentId: 'AJAXContent', 
-                        postData: { "ajaxControlViewModel": { "ControlName": "", 
-                                                              "ControlAssembly": "", 
-                                                              "ControlPath": baseUrl + "Controls/UserControlSimple.ascx", 
-                                                              "ControlParams": [{ "Key": "TextProperty1", "Value": "Set via JavaScript, rendered via WCF!" }, 
-                                                                                { "Key": "AjaxAutoRefresh", "Value": "True"}]} }, 
-                        RESTUrl: baseUrl + 'Service/AjaxContent.svc/GetAJAXControl', 
-                        ajaxSpinnerId: 'ajaxifyspinner'
-                      });
+
+        var model = new $.ucajax.viewModel($.ucajax.DICTIONARY_TYPE.WCF);
+        model.ajaxControlViewModel.ControlPath = baseUrl + "Controls/UserControlSimple.ascx";
+        model.ajaxControlViewModel.ControlParams.push(new model.keyValuePair("TextProperty1", "Set via JavaScript, rendered via WCF!"));
+        model.ajaxControlViewModel.ControlParams.push(new model.keyValuePair("TextProperty2", "True"));
+                                   
+        $().ucajax({ contentId: 'AJAXContent',
+            postData: model, 
+            RESTUrl:  baseUrl + 'Service/AjaxContent.svc/GetAJAXControl',
+            ajaxSpinnerId: 'ajaxifyspinner',
+            autoRefresh: true
+        });
+
     });   
 </script>
 <h2>
@@ -23,7 +27,8 @@
     <p>
         This example uses the $().ucajax(); jQuery plug-in directly, 
         then loads the control via WCF. This example is also using the AjaxAutoRefresh feature, 
-        you can find more details <a href="#todo">here</a>.
+        you can find more details <a href="#todo">here</a>. One last thing, querystring params 
+        also get included in the ControlParams.
     </p>  
     <h2>Code for this page:</h2>
     <h4>HTML Markup:</h4>
@@ -39,18 +44,17 @@
     <h4>JavaScript:</h4>
     <br>
     <pre class="brush: js;">
-        var baseUrl = "&lt;%= ResolveUrl("~/") %&gt;";
-        $(document).ready(function () {
-           $().ucajax({ contentId: 'AJAXContent', 
-                        postData: { "ajaxControlViewModel": { "ControlName": "", 
-                                                              "ControlAssembly": "", 
-                                                              "ControlPath": baseUrl + "Controls/UserControlSimple.ascx", 
-                                                              "ControlParams": [{ "Key": "TextProperty1", "Value": "Set via JavaScript, rendered via WCF!" }, 
-                                                                                { "Key": "AjaxAutoRefresh", "Value": "True"}]} }, 
-                        RESTUrl: baseUrl + 'Service/AjaxContent.svc/GetAJAXControl', 
-                        ajaxSpinnerId: 'ajaxifyspinner'                       
-                      });
-        });  
+        var model = new $.ucajax.viewModel($.ucajax.DICTIONARY_TYPE.WCF);
+        model.ajaxControlViewModel.ControlPath = baseUrl + "Controls/UserControlSimple.ascx";
+        model.ajaxControlViewModel.ControlParams.push(new model.keyValuePair("TextProperty1", "Set via JavaScript, rendered via WCF!"));
+        model.ajaxControlViewModel.ControlParams.push(new model.keyValuePair("TextProperty2", "True"));
+                                   
+        $().ucajax({ contentId: 'AJAXContent',
+            postData: model, 
+            RESTUrl:  baseUrl + 'Service/AjaxContent.svc/GetAJAXControl',
+            ajaxSpinnerId: 'ajaxifyspinner',
+            autoRefresh: true
+        });
     </pre>
     <h2>Result:</h2>               
     <p>
