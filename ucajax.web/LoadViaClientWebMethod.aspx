@@ -26,7 +26,8 @@
     <p>
         This example uses the $().ucajax(); jQuery plug-in directly, 
         then loads the control via a WebMethod. This example is also using the AjaxAutoRefresh feature, 
-        you can find more details <a href="#todo">here</a>.
+        you can find more details <a href="#todo">here</a>. One last thing, querystring params 
+        also get included in the ControlParams.
     </p>  
     <h2>Code for this page:</h2>
     <h4>HTML Markup:</h4>

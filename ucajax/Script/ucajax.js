@@ -31,22 +31,12 @@
             }
             
         }
-
-        //shield consumer from differences in default WCF and WebMethod deserialization formats
-        this.keyValuePair = function ( key, value) {
-            if (type == $.ucajax.DICTIONARY_TYPE.WCF) {
-                this.Key = key;
-                this.Value = value;
-            }
-            else if (type == $.ucajax.DICTIONARY_TYPE.WEBMETHOD) {
-                this[key] = value;
-            }
-            else {//default WCF
-                this.Key = key;
-                this.Value = value;
-            }
+        
+        this.keyValuePair = function ( key, value) {           
+            this.Key = key;
+            this.Value = value;
+           
         };
-
 
 
     };
