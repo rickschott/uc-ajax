@@ -2,12 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata >
     <id>ucajax</id>
-    <version>1.0.13</version>
+    <version>1.0.14</version>
     <authors>Rick Schott</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>.NET library and jQuery plugin for rendering ASP.NET UserControls via WCF and WebMethods.</description>
      <language>en-US</language>
-    <projectUrl>https://www.devlpr.net/ucajax</projectUrl>
+    <projectUrl>http://www.devlpr.net/ucajax</projectUrl>
     <licenseUrl>https://github.com/rickschott/uc-ajax/blob/master/license.txt</licenseUrl>
     <iconUrl>http://www.devlpr.net/ucajax/128x128ucAlpha.png</iconUrl>
     <tags>ajax asp.net jQuery</tags> 
