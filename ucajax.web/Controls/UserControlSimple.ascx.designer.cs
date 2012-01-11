@@ -49,6 +49,15 @@ namespace ucajax.web.Controls {
         protected global::System.Web.UI.WebControls.HyperLink hlLinkToMe;
         
         /// <summary>
+        /// lblReload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblReload;
+        
+        /// <summary>
         /// lblDateTime control.
         /// </summary>
         /// <remarks>

@@ -4,3 +4,5 @@ C:\Library\uc-ajax\ucajax.web\bin\ucajax.web.pdb
 C:\Library\uc-ajax\ucajax.web\bin\ucajax.dll
 C:\Library\uc-ajax\ucajax.web\obj\Debug\ucajax.web.dll
 C:\Library\uc-ajax\ucajax.web\obj\Debug\ucajax.web.pdb
+C:\Library\uc-ajax\ucajax.web\bin\Microsoft.Web.Infrastructure.dll
+C:\Library\uc-ajax\ucajax.web\bin\SignalR.dll

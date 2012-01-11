@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
+using System.Web.Routing;
+using SignalR.Routing;
 
 namespace ucajax.web
 {
@@ -13,6 +15,7 @@ namespace ucajax.web
         void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup
+            RouteTable.Routes.MapConnection<MyConnection>("echo", "echo/{*operation}");
 
         }
 

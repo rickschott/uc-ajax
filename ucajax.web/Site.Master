@@ -31,6 +31,7 @@
                         <asp:MenuItem NavigateUrl="~/LoadViaServer.aspx" Text="Server-side Loader WCF"/> 
                         <asp:MenuItem NavigateUrl="~/LoadViaClientWebMethod.aspx?anotherparam=test" Text="Client-side Loader WebMethod"/>
                         <asp:MenuItem NavigateUrl="~/LoadViaServerWebMethod.aspx" Text="Server-side Loader WebMethod"/>  
+                         <asp:MenuItem NavigateUrl="~/LoadViaClientSignalR.aspx?anotherparam=test" Text="Client-side Loader WCF/SingalR"/>
                     </Items>
                 </asp:Menu>
             </div>

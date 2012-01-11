@@ -14,11 +14,14 @@ namespace ucajax.web.Controls
 
         public bool TextProperty2 { get; set; }
 
+        public bool AjaxAutoRefresh { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             lblTextProperty1.Text = TextProperty1;
             lblTextProperty2.Text = TextProperty2.ToString();
             lblDateTime.Text = "Oh, look at the time: " + DateTime.Now.ToString();
+            lblReload.Visible = AjaxAutoRefresh;
         }
     }
 }
