@@ -6,22 +6,22 @@
 
 ### Features
 
-* Will support .NET 3.5+, currently use .NET 4(need to change NuGet package to reflect)
+* Currently supports .NET 4 and up
 * jQuery plugin for rendering ASP.NET UserControls via WCF and WebMethods
+* JavaScript ViewModel for ease of client-side use 
 * Helper function for rendering that the WCF and WebMethod use can be used as needed
 * Fully functionaly demo project always using the latest NuGet release ie: the live demo
+* Demo using [SignalR][4] to notify UI to reload UserControls via ucajax across connected clients.
 
 ### ToDo:
-* Finish demo web app pages for different rendering methods ie: pure js, controls packaged in .dlls...etc
+* Continue to enhance the demo web app pages for different rendering methods ie: pure js, controls packaged in .dlls...etc
 * Add more documentation to GitHub
-* Add proptype js object for ajaxControlViewModel
-* Refine jQuery plugin
-
 
 ### Future ideas:
-* Using SignalR to receive UserControls over the wire based on server-side events.
+* Using [SignalR][4] to receive UserControls over the wire based on server-side events.
 
  
   [1]: http://www.devlpr.net/ucjax
   [2]: http://twitter.com/ucajax
   [3]: http://www.devlpr.net/ucajaxdemo
+  [4]: https://github.com/SignalR/SignalR

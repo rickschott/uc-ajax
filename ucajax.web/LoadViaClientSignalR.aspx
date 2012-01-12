@@ -1,4 +1,4 @@
-﻿<%@ Page Title="ucajax - Load via Client WCF" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LoadViaClientSignalR.aspx.cs" Inherits="ucajax.web.LoadViaClientSignalR" %>
+﻿<%@ Page Title="ucajax - Load via Client WCF using SignalR" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LoadViaClientSignalR.aspx.cs" Inherits="ucajax.web.LoadViaClientSignalR" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -9,7 +9,7 @@
         var connection = $.connection('echo');
 
         connection.received(function (data) {
-            $('#messages').append('<li>received SingalR data...reloading control</li>');
+            $('#messages').append('<li>received SignalR data...reloading control: ' + new Date().toString() + '</li>');
             ReloadControl()
         });
 
@@ -41,15 +41,16 @@
         });   
     }
 </script>
- <h2><span id="broadcast" value="broadcast" style='cursor:pointer;' >CLICK TO BROADCAST CONTROL RELOAD</span></h2>
+ <div><h1><span id="broadcast" value="broadcast" style='cursor:pointer;' >CLICK TO BROADCAST CONTROL RELOAD</span></h1></div>
 <ul id="messages">
 </ul>
     <h2>
-        Load Via Client WCF using SingalR PersistentConnection
+        Load Via Client WCF using <a href="https://github.com/SignalR/SignalR" target="_blank"> SignalR</a> PersistentConnection
     </h2>
     <p>
         This example uses the $().ucajax(); jQuery plug-in directly, 
-        then loads the control via WCF when receiving a SingalR message.
+        then loads the control via WCF when receiving a SignalR message.  
+        Open this page on multiple browsers and click, "CLICK TO BROADCAST CONTROL RELOAD", to see it in action.
     </p>  
     <h2>Result:</h2>               
     <p>
@@ -76,7 +77,7 @@
             var connection = $.connection('echo');
 
             connection.received(function (data) {              
-                $('#messages').append('<li>received SingalR data...reloading control</li>');
+                $('#messages').append('<li>received SignalR data...reloading control</li>');
                 ReloadControl()
             });
 
