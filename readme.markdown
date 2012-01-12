@@ -13,6 +13,10 @@
 * Fully functionaly demo project always using the latest NuGet release ie: the live demo
 * Demo using [SignalR][4] to notify UI to reload UserControls via ucajax across connected clients.
 
+## Get it on NuGet!
+
+    Install-Package ucajax
+
 ### ToDo:
 * Continue to enhance the demo web app pages for different rendering methods ie: pure js, controls packaged in .dlls...etc
 * Add more documentation to GitHub
