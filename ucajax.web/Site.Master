@@ -35,12 +35,12 @@
                     IncludeStyleBlock="false" Orientation="Horizontal">
                     <Items>
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" />
-                        <asp:MenuItem Text="Client-side Loaders" ToolTip="Client-side Loaders">
+                        <asp:MenuItem Text="Client-side Loaders" Selectable="false" ToolTip="Client-side Loaders">
                             <asp:MenuItem NavigateUrl="~/LoadViaClient.aspx?anotherparam=test" Text="Client-side Loader WCF"/>
                                 <asp:MenuItem NavigateUrl="~/LoadViaClientWebMethod.aspx?anotherparam=test" Text="Client-side Loader WebMethod" />
                                 <asp:MenuItem NavigateUrl="~/LoadViaClientSignalR.aspx?anotherparam=test" Text="Client-side Loader WCF/SingalR" />
                             </asp:MenuItem>
-                            <asp:MenuItem Text="Server-side Loaders" ToolTip="Server-side Loaders">
+                            <asp:MenuItem Text="Server-side Loaders" Selectable="false" ToolTip="Server-side Loaders">
                                 <asp:MenuItem NavigateUrl="~/LoadViaServer.aspx" Text="Server-side Loader WCF" />
                                 <asp:MenuItem NavigateUrl="~/LoadViaServerWebMethod.aspx" Text="Server-side Loader WebMethod" />
                             </asp:MenuItem>
