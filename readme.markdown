@@ -25,7 +25,7 @@
 * Using [SignalR][4] to receive UserControls over the wire based on server-side events.
 
  
-  [1]: http://www.devlpr.net/ucjax
+  [1]: http://www.devlpr.net/ucajax
   [2]: http://twitter.com/ucajax
   [3]: http://www.devlpr.net/ucajaxdemo
   [4]: https://github.com/SignalR/SignalR
