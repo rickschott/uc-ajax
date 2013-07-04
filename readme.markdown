@@ -1,7 +1,7 @@
 # ucajax - .NET library and jQuery plugin for rendering ASP.NET UserControls via WCF and WebMethods
 
 ### [Official Site/Blog][1] - [@ucajax][2]  
-### Live demo can be viewed @ [http://www.devlpr.net/ucajaxdemo][3] 
+### Live demo can be viewed @ [http://ucajaxdemo.azurewebsites.net][3] 
 ### License: Apache License 2.0  
 
 ### Features
@@ -25,7 +25,7 @@
 * Using [SignalR][4] to receive UserControls over the wire based on server-side events.
 
  
-  [1]: http://www.devlpr.net/ucajax
+  [1]: http://ucajax.devlpr.net
   [2]: http://twitter.com/ucajax
-  [3]: http://www.devlpr.net/ucajaxdemo
+  [3]: http://ucajaxdemo.azurewebsites.net
   [4]: https://github.com/SignalR/SignalR
